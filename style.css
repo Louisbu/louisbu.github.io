@@ -11,8 +11,6 @@
 @import url('Fonts/Computer Modern/Typewriter Variable/cmun-typewriter-variable.css');
 @import url('Fonts/Computer Modern/Upright Italic/cmun-upright-italic.css');
 
-
-
 body {
     font-family: 'Computer Modern Sans', sans-serif;
     margin: 0;
@@ -21,15 +19,48 @@ body {
     color: #333;
 }
 
-header,
-section,
-footer {
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    margin-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #555;
+    padding: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #777;
+}
+
+section {
+    padding: 20px;
+    display: none;
     background-color: #ffffff;
     border: 1px solid #ced4da;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section a {
+    text-decoration: none;
+    border: none;
+}
+
+section a:hover {
+    border: none;
 }
 
 h1,
@@ -75,16 +106,23 @@ footer::before {
 }
 
 header::before {
-    border-width: 20px 25px 0 25px;
+    border-width: 20px 25px 0px 25px;
     border-color: #ffffff transparent transparent transparent;
 }
 
 section::before {
-    border-width: 0 25px 20px 25px;
+    border-width: 0px 25px 20px 25px;
     border-color: transparent transparent #ffffff transparent;
 }
 
 footer::before {
     border-width: 0 25px 20px 25px;
     border-color: transparent transparent #f8f9fa transparent;
+}
+
+section ul li {
+    margin: 5px 0;
+    /* Adjust as needed */
+    padding: 5px 0;
+    /* Adjust as needed */
 }
